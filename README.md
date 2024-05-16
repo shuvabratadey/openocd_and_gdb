@@ -15,7 +15,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 #### Path: `C:\Users\{user_name}\.espressif\tools\openocd-esp32\v0.12.0-esp32-20230419\openocd-esp32\bin\openocd.exe`
 
 ##  For ESP32 Board 
-<img src="https://hackster.imgix.net/uploads/attachments/1093023/wiring_hSSoC3xYZA.png" width="250"/>
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/ESP32_ESP-PROG_CONNECTION.png" width="500"/></br>
 ### OpenOCD Commands
 - **Command:** `openocd -f board/esp32-wrover-kit-3.3v.cfg`
 - **Programming or Erasing using OpenOCD:**
@@ -28,6 +28,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 - **Command:** `xtensa-esp32-elf-gdb blink.elf`
 
 ## For STM-32 Blue-Pill Module
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/stlink-with-bluepill.jpeg" width="1000"/></br>
 ### OpenOCD Commands
 - **Command:** `openocd -f board/stm32f3discovery.cfg`
 - **Alternative Command:**

@@ -21,7 +21,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 ${\textsf{\color{red}program filename [preverify] [verify] [reset] [exit] [offset]}}$
   - Example Commands:
     - `openocd -f board/esp32-wrover-kit-3.3v.cfg -c "flash init; init; flash erase_sector 0 1 last"`
-    - `openocd -f board/esp32-wrover-kit-3.3v.cfg -c "program blink.bin reset 0x10000"`
+    - `openocd -f board/esp32-wrover-kit-3.3v.cfg -c "program blink.bin reset exit 0x10000"`
     - `openocd -f board/esp32-wrover-kit-3.3v.cfg -c "program_esp blink.bin 0x10000 verify exit"`
 ### GDB Commands
 - Command: `xtensa-esp32-elf-gdb blink.elf`

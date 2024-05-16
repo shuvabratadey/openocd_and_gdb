@@ -15,6 +15,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 #### Path: `C:\Users\{user_name}\.espressif\tools\openocd-esp32\v0.12.0-esp32-20230419\openocd-esp32\bin\openocd.exe`
 
 ##  For ESP32 Board 
+<img src="https://hackster.imgix.net/uploads/attachments/1093023/wiring_hSSoC3xYZA.png" width="250"/>
 ### OpenOCD Commands
 - **Command:** `openocd -f board/esp32-wrover-kit-3.3v.cfg`
 - **Programming or Erasing using OpenOCD:**

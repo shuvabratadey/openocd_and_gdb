@@ -110,3 +110,13 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 19. **reset_config srst_only/none/hard/hard_and_srst**: Configures the reset behavior.
 
 20. **adapter driver**: Sets the JTAG adapter driver.
+
+----------------------------------------------------------------------------
+> [!NOTE]
+> ## For Changing the configuration of stm32 board for chinese blue-pill module:
+1. After installing openocd, open cmd and type 🠊 ```"where openocd"```
+
+2. Go to this openocd location and search for 🠊 ```\share\openocd\scripts\target\stm32f1x.cfg```</br>
+**Exaple:** ```C:\Users\{user_name}\.espressif\tools\openocd-esp32\v0.12.0-esp32-20230419\openocd-esp32\share\openocd\scripts\target\stm32f1x.cfg```
+
+3. Change the line no 44 from ```"0x1ba01477"``` to ```"0x2ba01477"```  From this ```set _CPUTAPID 0x1ba01477``` to ```set _CPUTAPID 0x2ba01477``` [Or make it '0' so it will not check any chip-id].

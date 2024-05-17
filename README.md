@@ -53,7 +53,20 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - **Set Port:** `4444`
   - **Set Host:** `localhost`
 
-## OpenOCD Commands from GDB
+# Follow this steps for Debug
+## Step-1: To debug a program, open the command prompt at the location of your build file
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/openocd_gdb_connection/pic-1.png" width="800"/></br>
+
+## Step-2: Execute openocd as instructed by the provided figure
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/openocd_gdb_connection/pic-2.png" width="800"/></br>
+
+## Step-3: Open another terminal and execute the gdb with the *.elf file, After gdb initiate, run the connect command to communicate gdb with openocd
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/openocd_gdb_connection/pic-3.png" width="800"/></br>
+
+## Step-4: Now the gdb is ready to accept your debugging commands
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/openocd_gdb_connection/pic-4.png" width="800"/></br>
+
+## Openocd and GDB Commands
 > [!TIP]
 >  ${\textsf{\color{blue}If gdb is used then must specify the}}$ ${\textsf{\color{red}'monitor'}}$ ${\textsf{\color{blue}keyword before the openocd command}}$
 

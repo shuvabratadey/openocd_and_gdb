@@ -14,8 +14,11 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
 #### Alternatively, you can use the ESP32 OpenOCD where you got the ESP32 gdb also (if esp-idf installed in your system):
 #### Path: `C:\Users\{user_name}\.espressif\tools\openocd-esp32\v0.12.0-esp32-20230419\openocd-esp32\bin\openocd.exe`
 
-##  For ESP32 Board 
+##  For ESP32 Board
 <img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/ESP32_ESP-PROG_CONNECTION.png" width="500"/></br>
+### Replace Driver of ESP-PROG using Zadig Software, So follow this steps after install Zadig Software.
+[![](https://img.shields.io/badge/Download_Zadig_Software-blue?style=for-the-badge)](https://zadig.akeo.ie/)
+<img src="https://github.com/shuvabratadey/openocd_and_gdb/blob/main/Pictures/how_to_replace_driver_esp-prog.png" width="1000"/></br>
 ### OpenOCD Commands
 - **Command:** `openocd -f board/esp32-wrover-kit-3.3v.cfg`
 - **Programming or Erasing using OpenOCD:**

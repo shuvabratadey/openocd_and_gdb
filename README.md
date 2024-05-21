@@ -86,6 +86,8 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `d loop`: Delete loop() breakpoint
   - `d`: Delete all breakpoints
   - `c`: Continue execution (Press Ctrl+C to exit execution)
+  - `s`: or `step` (Step In) executes the next line of source code, entering any function calls encountered.
+  - `n`: or `next`  (Step Over) executes the next line of source code without entering any function calls encountered.
 
 ## Here are some commonly used OpenOCD commands:
 1. **help**: Displays a list of available commands and their descriptions.

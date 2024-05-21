@@ -78,7 +78,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `monitor flash write_image erase stm32_blink.ino.elf`: Erase and flash the device using .elf file
   - `monitor flash write_image blink.bin 0x10000`: Flash the device using .bin file from a specific address
   - `shell cls`: Clear the screen from GDB
-  - `lay next`: Only works in `xtensa-esp32-elf-gdb`
+  - `lay next` or `lay prev`: Only works in `xtensa-esp32-elf-gdb`
   - `b loop`: Set breakpoint in the loop()
   - `b blink_example_main.c:19`: Set breakpoint in specific file for ESP32 board  ${\textbf{\color{red}Format:}}$ ${\textsf{\color{blue}b [file-name]:[line no]}}$
   - `b stm32_blink.ino:8`: Set breakpoint in specific file for STM32 board

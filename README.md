@@ -80,7 +80,13 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `monitor flash write_image erase stm32_blink.ino.elf`: Erase and flash the device using .elf file
   - `monitor flash write_image blink.bin 0x10000`: Flash the device using .bin file from a specific address
   - `shell cls`: Clear the screen from GDB
-  - `lay next` or `lay prev`: Only works in `xtensa-esp32-elf-gdb`
+  - `tui enable` | `tui disable` or press <b>Ctrl+X+A</b>: for enable/disable the text user interface [Only works in `xtensa-esp32-elf-gdb`]
+    - `lay next` or `lay prev`: To change the tabs
+    - `layout asm` To see what assembly tab
+    - `layout reg` To see what register tab
+    - To enable split screen, press <b>Ctrl+X</b> then press <b>2</b>
+    - enter `focus cmd` to switch focus to the command line gdb
+    - <b>Ctrl+P</b> To iterate through previous instructions in gdb
   - `b loop`: Set breakpoint in the loop()
   - `b blink_example_main.c:19`: Set breakpoint in specific file for ESP32 board  ${\textbf{\color{red}Format:}}$ ${\textsf{\color{blue}b [file-name]:[line no]}}$
   - `b stm32_blink.ino:8`: Set breakpoint in specific file for STM32 board
@@ -89,7 +95,10 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `d`: Delete all breakpoints
   - `c`: Continue execution (Press Ctrl+C to exit execution)
   - `s`: or `step` (Step In) executes the next line of source code, entering any function calls encountered
+  - `fin`: or `finish` (Step Out) executes the prev line of source code, out from any function calls encountered
   - `n`: or `next`  (Step Over) executes the next line of source code without entering any function calls encountered
+  - `p [variable_name]`: (Print Variable) Print the value of a variable
+  - `where`: Show the next statement that will be executed
   - `q`: quit gdb
 
 ## Here are some commonly used OpenOCD commands:

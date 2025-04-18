@@ -119,7 +119,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
     - `list 25`: Lists 10 lines centered around line 25 (i.e. lines 20–29).
     - `list 30,40`: Lists lines 30 through 40.
     - `list myfile.c:50`: Lists lines around line 50 in `myfile.c`.
-    - <b>Shortcut</b> keep typing `list` or just press `Enter` after using `list` once to continue listing the next lines.
+    - <b>Shortcut</b>: keep typing `list` or just press `Enter` after using `list` once to continue listing the next lines.
   - `watch <expression>`: is used to monitor the value of a variable and stop execution when it changes. This is different from a breakpoint, which stops execution when a specific line of code is reached.
     - `watch x`: This stops the program whenever the value of variable `x` is modified.
     - `info watchpoints`: Lists all active watchpoints.

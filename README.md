@@ -98,6 +98,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
     - `info scope <function>`: Lists the variables in scope for a function.
     - `info reg` or `info registers` or `info all-registers`: Lists CPU register contents.
     - `info threads`: Lists all threads.
+      - `info thread <num>`: Displays detailed info about a specific thread.
     - `info frame`: Details about the current stack frame.
     - `info stack`: Shows the current call stack.
     - `info sources`: Lists all source files that GDB has debug information for.
@@ -105,14 +106,20 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
     - `info line`: Shows the current source line and associated machine instructions.
     - `info address <symbol>`: Shows the memory address of a symbol (function or variable). `ex: info address main`
     - `info symbol <address>`: Shows which symbol (if any) is at the given memory address. `ex: info symbol 0x8002136`
-  - `d loop`: Delete loop() breakpoint
   - `d`: Delete all breakpoints
+  - `d loop`: Delete loop() breakpoint
   - `c`: Continue execution (Press Ctrl+C to exit execution)
   - `s`: or `step` (Step In) executes the next line of source code, entering any function calls encountered
   - `fin`: or `finish` (Step Out) executes the prev line of source code, out from any function calls encountered
   - `n`: or `next`  (Step Over) executes the next line of source code without entering any function calls encountered
   - `p [variable_name]`: (Print Variable) Print the value of a variable
   - `where`: Show the next statement that will be executed
+  - `list`: Displays the next 10 lines of source code (starting from the beginning, or where the last list command left off).
+    - `list main`: Lists the first 10 lines of the `main` function.
+    - `list 25`: Lists 10 lines centered around line 25 (i.e. lines 20–29).
+    - `list 30,40`: Lists lines 30 through 40.
+    - `list myfile.c:50`: Lists lines around line 50 in `myfile.c`.
+    - <b>Shortcut</b> keep typing `list` or just press `Enter` after using `list` once to continue listing the next lines.
   - `q`: quit gdb
 
 ## Here are some commonly used OpenOCD commands:

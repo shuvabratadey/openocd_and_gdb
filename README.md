@@ -120,6 +120,16 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
     - `list 30,40`: Lists lines 30 through 40.
     - `list myfile.c:50`: Lists lines around line 50 in `myfile.c`.
     - <b>Shortcut</b> keep typing `list` or just press `Enter` after using `list` once to continue listing the next lines.
+  - `watch <expression>`: is used to monitor the value of a variable and stop execution when it changes. This is different from a breakpoint, which stops execution when a specific line of code is reached.
+    - `watch x`: This stops the program whenever the value of variable `x` is modified.
+    - `info watchpoints`: Lists all active watchpoints.
+    - `delete <n>`: Deletes watchpoint number `n`.
+    - `disable <n>`: Disables watchpoint `n` without deleting it.
+    - `enable <n>`: Enables a previously disabled watchpoint.
+    - <b>Types of Watchpoints</b>:
+      - `watch`: Triggers when the expression is `written to`.
+      - `rwatch`: Triggers when the expression is `read`.
+      - `awatch`: Triggers when the expression is `either read` or `written`.
   - `q`: quit gdb
 
 ## Here are some commonly used OpenOCD commands:

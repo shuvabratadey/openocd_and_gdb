@@ -90,7 +90,21 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `b loop`: Set breakpoint in the loop()
   - `b blink_example_main.c:19`: Set breakpoint in specific file for ESP32 board  ${\textbf{\color{red}Format:}}$ ${\textsf{\color{blue}b [file-name]:[line no]}}$
   - `b stm32_blink.ino:8`: Set breakpoint in specific file for STM32 board
-  - `info b`: List all breakpoints
+  - `info <topic>` : is used to display a wide range of information about the program being debugged.
+    - `info b` or `info breakpoints`: Lists all breakpoints, watchpoints, and catchpoints.
+    - `info wat` or `info watchpoints`: Lists all active watchpoints.
+    - `info var` or `info variables`: Lists global and static variable names.
+    - `info func` or `info functions`: Lists all functions in the program.
+    - `info scope <function>`: Lists the variables in scope for a function.
+    - `info reg` or `info registers` or `info all-registers`: Lists CPU register contents.
+    - `info threads`: Lists all threads.
+    - `info frame`: Details about the current stack frame.
+    - `info stack`: Shows the current call stack.
+    - `info sources`: Lists all source files that GDB has debug information for.
+    - `info files` or `info target`: Gives information about the symbol file and executable loaded.
+    - `info line`: Shows the current source line and associated machine instructions.
+    - `info address <symbol>`: Shows the memory address of a symbol (function or variable). `ex: info address main`
+    - `info symbol <address>`: Shows which symbol (if any) is at the given memory address. `ex: info symbol 0x8002136`
   - `d loop`: Delete loop() breakpoint
   - `d`: Delete all breakpoints
   - `c`: Continue execution (Press Ctrl+C to exit execution)

@@ -148,6 +148,40 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
         - dump s my_string.txt buf
       - 🧪 Dump a Value:
         - dump value var_dump.txt varname
+  - `if`: use `if` statements inside GDB to run commands conditionally.
+    - 🔹 <b>Basic if Syntax in GDB:</b> You can include multiple commands between the `if` and `end`.
+    ```
+    if <condition>
+      <commands>
+    end
+    ```
+    - <b>✅ Conditional Print:</b>
+    ```
+    if buf[0] == 'A'
+      print "buf starts with A"
+    end
+    ```
+    - <b>✅ Checking a variable:</b> else is allowed too, but else if is not (just nest another if block inside). ⚠️
+    ```
+    if state == 1
+      print "LED is ON"
+    else
+      print "LED is OFF"
+    end
+    ```
+    - <b>✅ Conditional Breakpoint Commands:</b> You can also attach conditions to breakpoint commands
+    ```
+    break loop
+    commands
+      if state == 1
+          print "State is 1"
+      end
+    end
+    ```
+    - <b>🛠 GDB Conditional Breakpoints (Alternative):</b> If you just want to stop only when a condition is true
+    ```
+    break loop if state == 1
+    ```
   - `list`: Displays the next 10 lines of source code (starting from the beginning, or where the last list command left off).
     - `list main`: Lists the first 10 lines of the `main` function.
     - `list 25`: Lists 10 lines centered around line 25 (i.e. lines 20–29).

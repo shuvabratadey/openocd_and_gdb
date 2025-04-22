@@ -112,7 +112,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `s`: or `step` (Step In) executes the next line of source code, entering any function calls encountered
   - `fin`: or `finish` (Step Out) executes the prev line of source code, out from any function calls encountered
   - `n`: or `next`  (Step Over) executes the next line of source code without entering any function calls encountered
-  - `p [variable_name]`: (Print Variable) Print the value of a variable
+  - `p [variable_name]`: (Print Variable) Print the value of a variable, No matter if the variable is a buffer, it prints the whole buffer.
   - `where`: Show the next statement that will be executed
   - `list`: Displays the next 10 lines of source code (starting from the beginning, or where the last list command left off).
     - `list main`: Lists the first 10 lines of the `main` function.

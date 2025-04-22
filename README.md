@@ -112,8 +112,42 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
   - `s`: or `step` (Step In) executes the next line of source code, entering any function calls encountered
   - `fin`: or `finish` (Step Out) executes the prev line of source code, out from any function calls encountered
   - `n`: or `next`  (Step Over) executes the next line of source code without entering any function calls encountered
-  - `p [variable_name]`: (Print Variable) Print the value of a variable, No matter if the variable is a buffer, it prints the whole buffer.
   - `where`: Show the next statement that will be executed
+  - `p [variable_name]`: (Print Variable) Print the value of a variable, No matter if the variable is a buffer, it prints the whole buffer.
+  - `x`: Displays the memory contents at a given address using the specified format.
+    - x <`Address_Expression`>
+    - x /[`Format`] <`Address_Expression`>
+    - x /[`Length`] [`Format`] <`Address_Expression`>
+    - x/[`Length`] [`Format`] [`Size`] <`Address_Expression`>
+      - `x` = examine memory
+      - `Length` = how many items to display
+      - `Format` = how to display them (char, hex, int, etc.)
+      - `Size` = how big each item is (byte, word, etc.)
+      - `Address_Expression` = the memory address or variable name you want to inspect
+    - <b>✅ Examples :</b></br>
+      - `x/10cb buf`: View 10 bytes at address `buf` as chars
+      - `x/16dw some_array`: View 16 integers at address `some_array`
+      - `x/8xb 0x20000000`: View memory at an address in hex
+      - `x/5i main`: Disassemble 5 instructions at `main`
+  - `dump`: writes the memory between the two addresses to a binary file.
+    - dump <`type`> <`filename`> <`args`>
+      -  Where <`type`> is one of the following:
+         - `memory`: Dumps raw memory to a binary file
+         - `binary`: Alias for memory
+         - `i`:	Dumps instructions (disassembly)
+         - `s`:	Dumps a string
+         - `value`:	Dumps the value of a variable/expression
+    - <b>✅ Examples :</b></br>
+      - ✅ Dumping Memory:
+        - dump memory <`filename`> <`start-address`> <`end-address`>
+        - dump memory buf_dump.bin 0x20000000 0x20000064
+        - dump memory buf_dump.bin buf buf+10
+      - 🧠 Dump Disassembly:
+        - dump i asm my_asm.txt main main+100
+      - 📄 Dump a String:
+        - dump s my_string.txt buf
+      - 🧪 Dump a Value:
+        - dump value var_dump.txt varname
   - `list`: Displays the next 10 lines of source code (starting from the beginning, or where the last list command left off).
     - `list main`: Lists the first 10 lines of the `main` function.
     - `list 25`: Lists 10 lines centered around line 25 (i.e. lines 20–29).

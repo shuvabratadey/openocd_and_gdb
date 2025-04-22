@@ -149,7 +149,7 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
       - 🧪 Dump a Value:
         - dump value var_dump.txt varname
   - `if`: use `if` statements inside GDB to run commands conditionally.
-    - 🔹 <b>Basic if Syntax in GDB:</b> You can include multiple commands between the `if` and `end`.
+    - <b>✅ Basic if Syntax in GDB:</b> You can include multiple commands between the `if` and `end`.
     ```
     if <condition>
       <commands>

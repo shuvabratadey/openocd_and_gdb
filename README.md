@@ -181,6 +181,8 @@ This README provides a comprehensive guide on using OpenOCD for programming and 
     - <b>🛠 GDB Conditional Breakpoints (Alternative):</b> If you just want to stop only when a condition is true
     ```
     break loop if state == 1
+          or
+    break main.c:6 if i == 5
     ```
   - `list`: Displays the next 10 lines of source code (starting from the beginning, or where the last list command left off).
     - `list main`: Lists the first 10 lines of the `main` function.
